@@ -1,0 +1,101 @@
+h1 {
+    text-align: center;
+}
+
+form#menu>div {
+    height: 3em;
+    position: relative;
+}
+
+form#menu>div>label {
+    position: absolute;
+    right: 61%;
+}
+
+form#menu>div>label#output {
+    position: unset;
+    display: block;
+    text-align: center;
+}
+
+form#menu>div>input, form#menu>div>div {
+    position: absolute;
+    left: 40%;
+}
+
+form#menu>button {
+    display: block;
+    margin: auto;
+}
+
+table#scoreBoard {
+    margin: auto;
+    margin-top: 1em;
+    border-collapse: collapse;
+}
+
+table#scoreBoard>caption {
+    font-weight: bold;
+}
+
+table#scoreBoard>tr:nth-of-type(odd) {
+    background-color: lightgrey;
+}
+
+table#scoreBoard>tr>* {
+    min-width: 5em;
+    text-align: center;
+}
+
+table#scoreBoard>tr>*:first-of-type {
+    text-align: left;
+}
+
+table#scoreBoard>tr>*:last-of-type {
+    text-align: right
+}
+
+div#board {
+    border: 2px solid black;
+    margin: auto;
+    display: grid;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    padding: 10px;
+    perspective: 500px;
+}
+
+div#dashboard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div#dashboard>* {
+    margin: 10px;
+}
+
+div.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 10px;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+div.card.facedown {
+    transform: rotateY(-180deg);
+}
+
+div.card>img {
+    max-height: 99%;
+    max-width: 99%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+}
